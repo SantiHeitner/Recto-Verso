@@ -1,0 +1,318 @@
+body {
+    font-family: avenir;
+    nav {
+        width: 100%;
+        width: 99.5%;
+        height: 90px;
+        background-color: black;
+        margin: 0.25%;
+        border: 1px;
+        border-color: white;
+        vertical-align: top;
+        @media only screen and (max-width: 700px) {
+            position: relative;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .menu {
+            display: none;
+            @media only screen and (max-width: 700px) {
+                display: inline-block;
+                position: relative;
+                height: 70px;
+                width: 20%;
+                top: 20px;
+                left: 20px;
+                &:hover .fallen {
+                    display: block;
+                }
+            }
+            .picbutton {
+                display: none;
+                @media only screen and (max-width: 700px) {
+                    display: inline-block;
+                    text-align: right;
+                    width: 56px;
+                    height: 55px;
+                    transition: 0.25s ease-in;
+                    cursor: pointer;
+                    background-color: black;
+                    border: 0px;
+                }
+            }
+            .fallen {
+                @media only screen and (max-width: 700px) {
+                    display: none;
+                    font-family: avenir;
+                    position: absolute;
+                    background-color: #000;
+                    width: 250%;
+                    height: auto;
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                    text-align: center;
+                    left: -20px;
+                    top: 70px;
+                    border-right-color: #666;
+                    border-right-width: 1px;
+                    border-right-style: solid;
+                    &:hover {
+                        .dropdown-content {
+                            display: block;
+                        }
+                    }
+                }
+                .chose {
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-family: avenir;
+                    font-size: 15px;
+                    width: 100%;
+                    line-height: 90px;
+                    margin: 0 auto;
+                    text-align: center;
+                    transition: 0.25s ease-in;
+                    color: white;
+                    font-weight: bold;
+                    @media only screen and (max-width: 700px) {
+                        &:hover {
+                            background-color: #404040;
+                        }
+                    }
+                }
+            }
+            .dropdown-content {
+                font-family: avenir;
+                display: none;
+                position: absolute;
+                background-color: #000;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                left: -30%;
+                top: 99%;
+                @media only screen and (max-width: 700px) {
+                    width: 100%;
+                    left: 100%;
+                    top: 0%;
+                    min-width: 0;
+                }
+                .eds {
+                    @media only screen and (max-width: 700px) {
+                        width: 100%;
+                        height: 54px;
+                        line-height: 44px;
+                        transition: 0.25s ease-in;
+                        border-left-color: #666;
+                        border-left-width: 1px;
+                        border-left-style: solid;
+                        &:hover {
+                            color: white;
+                            background-color: #404040;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .logoleft {
+        display: inline-block;
+        width: 274px;
+        @media only screen and (max-width: 700px) {
+            display: inline-block;
+            padding-right: 7%;
+            float: right;
+            width: 200px;
+            &:hover {
+                background-color: #404040;
+            }
+        }
+        h1 {
+            color: white;
+            font-size: 40px;
+            margin: 0;
+            display: inline-block;
+            line-height: 90px;
+            padding-left: 15px;
+            padding-right: 5%;
+            @media only screen and (max-width: 700px) {
+                font-size: 30px;
+                float: right;
+                @media only screen and (max-width: 400px) {
+                    font-size: 25px;
+                    &:hover {
+                        background-color: #404040;
+                    }
+                }
+            }
+        }
+    }
+    .naviga {
+        float: right;
+        display: inline-block;
+        height: auto;
+        @media only screen and (max-width: 700px) {
+            display: none;
+        }
+        .dropdown:hover {
+            background-color: #404040;
+            .dropdown-content {
+                display: block;
+            }
+        }
+        .chose {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            font-family: avenir;
+            font-size: 15px;
+            width: 100px;
+            line-height: 90px;
+            margin: 0 auto;
+            text-align: center;
+            transition: 0.25s ease-in;
+            &:hover {
+                background-color: #404040;
+            }
+            @media only screen and (max-width: 700px) {
+                &:hover {
+                    background-color: #404040;
+                    width: 100%;
+                }
+            }
+            .dropbtn {
+                font-family: avenir;
+                color: white;
+                margin: 0px 20px;
+                border: none;
+                transition: 0.5s ease-in;
+                line-height: 90px;
+                height: 90px;
+                text-align: center;
+                font-weight: bold;
+                &:hover {
+                    background-color: #404040;
+                }
+            }
+        }
+        .dropdown-content {
+            font-family: avenir;
+            display: none;
+            position: absolute;
+            background-color: #000;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            left: -30%;
+            top: 99%;
+            width: 100%;
+            a {
+                color: white;
+                padding: 5px 5px;
+                text-decoration: none;
+                display: block;
+            }
+        }
+    }
+    .eds {
+        &:hover {
+            color: white;
+            background-color: #404040;
+        }
+        @media only screen and (max-width: 700px) {
+            line-height: 44px;
+            transition: 0.25s ease-in;
+            border-left-color: #666;
+            border-left-width: 1px;
+            border-left-style: solid;
+            width: 100%;
+            &:hover {
+                color: white;
+                background-color: #404040;
+            }
+        }
+    }
+    .post {
+        border-bottom: 1px solid black;
+        width: 80%;
+        margin: auto;
+        p {
+            margin: 30px 10%;
+            text-align: center;
+            line-height: 1.5;
+        }
+    }
+    h1 {
+        color: white;
+        font-size: 40px;
+        margin: 0;
+        display: inline-block;
+        line-height: 90px;
+        padding-left: 15px;
+        padding-right: 5%;
+        &:hover {
+            background-color: #404040;
+        }
+        @media only screen and (max-width: 700px) {
+            font-size: 30px;
+            float: right;
+            @media only screen and (max-width: 400px) {
+                font-size: 25px;
+            }
+        }
+    }
+    h2 {
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .footer {
+        background-color: #999;
+        line-height: 110%;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        float: left;
+        margin: -8px;
+        text-align: center;
+    }
+    .footer1 {
+        background-color: #999;
+        line-height: 110%;
+        width: 100%;
+        float: left;
+        margin: -8px;
+        text-align: center;
+    }
+    .logo {
+        font-size: 600%;
+        color: #000;
+        font-family: cursive, Times;
+        width: auto;
+        padding-top: 15%;
+        @media only screen and (max-width: 400px) {
+            font-size: 300%;
+        }
+    }
+    &#mainpage {
+        background: url(../Recto-Verso/frontpic2.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    p {
+        margin: 30px 10%;
+        text-align: center;
+        line-height: 1.5;
+    }
+    object {
+        width: 99.9%;
+        height: 100vh;
+    }
+}
